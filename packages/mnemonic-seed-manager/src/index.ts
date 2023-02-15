@@ -1,6 +1,6 @@
 import { MnemonicEntity } from './entities/MnemonicEntity'
 
-const schema = require('../plugin.schema.json')
+import schema from './plugin.schema.json' assert { type: 'json' }
 export { schema }
 export { MnemonicSeedManager } from './agent/MnemonicSeedManager'
 export * from './types/IMnemonicSeedManager'

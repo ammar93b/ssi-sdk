@@ -1,7 +1,8 @@
 /**
  * @public
  */
-const schema = require('../plugin.schema.json')
+import * as schema from './plugin.schema.json'
+
 export { schema }
 export {
   SphereonBbsBlsSignature2020,

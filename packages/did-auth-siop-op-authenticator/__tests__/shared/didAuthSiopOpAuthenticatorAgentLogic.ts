@@ -1,20 +1,22 @@
 import * as fs from 'fs'
 import { IDataStore, TAgent, VerifiableCredential } from '@veramo/core'
 import { IAuthRequestDetails, IDidAuthSiopOpAuthenticator } from '../../src'
-import { OP, AuthorizationRequest, VerifiablePresentationWithLocation } from '@sphereon/did-auth-siop'
-
 import {
+  AuthorizationRequest,
+  OP,
+  ParsedAuthorizationRequestURI,
   PresentationDefinitionWithLocation,
   ResponseContext,
   ResponseMode,
   ResponseType,
   SubjectIdentifierType,
   UrlEncodingFormat,
+  VerifiablePresentationWithLocation,
   VerificationMode,
   VerifiedAuthorizationRequest,
-  ParsedAuthorizationRequestURI,
 } from '@sphereon/did-auth-siop'
 import { mapIdentifierKeysToDoc } from '@veramo/utils'
+import * as nock from 'nock'
 
 function getFile(path: string) {
   return fs.readFileSync(path, 'utf-8')
@@ -24,7 +26,6 @@ function getFileAsJson(path: string) {
   return JSON.parse(getFile(path))
 }
 
-const nock = require('nock')
 jest.mock('@veramo/utils', () => ({
   ...jest.requireActual('@veramo/utils'),
   mapIdentifierKeysToDoc: jest.fn(),

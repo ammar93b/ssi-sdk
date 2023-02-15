@@ -7,5 +7,6 @@
     "strictPropertyInitialization": false,
     "noUnusedLocals": false
   },
-  "references": [{ "path": "../ssi-types" }]
+  "references": [{ "path": "../ssi-types" }],
+  "include": ["src/plugin.schema.json", "src/**/*"]
 }

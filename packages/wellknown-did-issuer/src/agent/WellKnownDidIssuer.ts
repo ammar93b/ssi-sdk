@@ -31,7 +31,7 @@ import { schema } from '../index'
  * {@inheritDoc IWellKnownDidIssuer}
  */
 export class WellKnownDidIssuer implements IAgentPlugin {
-  readonly schema = schema.IWellKnownDidVerifier
+  readonly schema = schema.IWellKnownDidIssuer
   readonly methods: IWellKnownDidIssuer = {
     addLinkedDomainsService: this.addLinkedDomainsService.bind(this),
     getDidConfigurationResource: this.getDidConfigurationResource.bind(this),

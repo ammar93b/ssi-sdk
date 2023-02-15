@@ -1,8 +1,8 @@
 import { ValidationStatusEnum } from '@sphereon/wellknown-dids-client'
-import { TAgent, IResolver } from '@veramo/core'
+import { IResolver, TAgent } from '@veramo/core'
 import { IWellKnownDidVerifier } from '../../src/types/IWellKnownDidVerifier'
 
-const nock = require('nock')
+import * as nock from 'nock'
 
 type ConfiguredAgent = TAgent<IWellKnownDidVerifier | IResolver>
 

@@ -4,5 +4,6 @@
     "rootDir": "src",
     "outDir": "dist",
     "declarationDir": "dist"
-  }
+  },
+  "include": ["src/plugin.schema.json", "src/**/*"]
 }

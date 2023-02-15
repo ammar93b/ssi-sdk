@@ -20,7 +20,7 @@ import { LdDocumentLoader } from './ld-document-loader'
 import { LdSuiteLoader } from './ld-suite-loader'
 
 //Support for Typescript added in version 9.0.0
-const jsonld = require('jsonld-signatures')
+import jsonld from '@digitalcredentials/jsonld-signatures'
 
 export type RequiredAgentMethods = IResolver & Pick<IKeyManager, 'keyManagerGet' | 'keyManagerSign'>
 
@@ -160,7 +160,7 @@ export class LdCredentialModule {
         const eventData = {
           credential: credential,
           result: item,
-        };
+        }
         context.agent.emit('verifyCredential-success', eventData)
       })
       return true
@@ -222,7 +222,7 @@ export class LdCredentialModule {
         const eventData = {
           presentation: presentation,
           result: item,
-        };
+        }
         context.agent.emit('verifyPresentation-success', eventData)
       })
       return true

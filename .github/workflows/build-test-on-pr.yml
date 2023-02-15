@@ -33,9 +33,9 @@ jobs:
 #          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
 #          key: ${{ runner.os }}-yarn-2-${{ hashFiles('**/package.json') }}
 
-      - run: yarn install --frozen-lockfile
-      - run: yarn bootstrap
-      - run: yarn build
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm bootstrap
+      - run: pnpm build
       - name: run CI tests
         env:
           INCLUDE_POSTGRES_TESTS: true
@@ -48,5 +48,5 @@ jobs:
           SPHEREON_SSI_MSAL_CLIENT_SECRET: ${{ secrets.SPHEREON_SSI_MSAL_CLIENT_SECRET }}
           SPHEREON_SSI_MSAL_USERNAME: ${{ secrets.SPHEREON_SSI_MSAL_USERNAME }}
           SPHEREON_SSI_MSAL_PASSWORD: ${{ secrets.SPHEREON_SSI_MSAL_PASSWORD }}
-        run: yarn test:ci
+        run: pnpm test:ci
       - run: npx codecov

@@ -1,7 +1,7 @@
 /**
  * @public
  */
-const schema = require('../plugin.schema.json')
+import schema from './plugin.schema.json' assert { type: 'json' }
 export { schema }
 export { DidAuthSiopOpAuthenticator } from './agent/DidAuthSiopOpAuthenticator'
 export { OpSession } from './session/OpSession'

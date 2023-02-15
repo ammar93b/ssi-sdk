@@ -1,4 +1,4 @@
-const { base58 } = require('@scure/base')
+import { base58 } from '@scure/base'
 
 export enum MultibaseFormat {
   BASE58 = 'z',
@@ -21,7 +21,8 @@ export function multibaseToHex(multibase: string): { value: string; format: Mult
   if (!multibase.startsWith(MultibaseFormat.BASE58)) {
     throw new Error('Only base58 supported for now using multibase!')
   }
-  return { value: bytesToHex(base58.decode(multibase.substr(1), 'btc')), format: MultibaseFormat.BASE58 }
+  return { value: bytesToHex(base58.decode(multibase.substr(1) + 'btc')), format: MultibaseFormat.BASE58 }
+  // TODO base58.decode() does not seem top have 2 params now, concat + 'btc'?
 
   function bytesToHex(uint8a: Uint8Array): string {
     // pre-caching chars could speed this up 6x.

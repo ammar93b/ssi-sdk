@@ -6,5 +6,6 @@
     "declarationDir": "dist",
     "strictPropertyInitialization": false
   },
-  "references": []
+  "references": [],
+  "include": ["src/plugin.schema.json", "src/**/*"]
 }

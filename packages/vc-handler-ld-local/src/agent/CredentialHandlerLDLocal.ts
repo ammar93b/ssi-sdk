@@ -4,7 +4,7 @@ import { AbstractPrivateKeyStore } from '@veramo/key-manager'
 import { _ExtendedIKey, extractIssuer, isDefined, MANDATORY_CREDENTIAL_CONTEXT, OrPromise, processEntryToArray, RecordLike } from '@veramo/utils'
 import Debug from 'debug'
 
-import { IBindingOverrides, schema } from '../index'
+import { IBindingOverrides } from '../index'
 import { LdContextLoader } from '../ld-context-loader'
 import { LdCredentialModule } from '../ld-credential-module'
 import { LdSuiteLoader } from '../ld-suite-loader'
@@ -26,7 +26,7 @@ const debug = Debug('sphereon:ssi-sdk:ld-credential-module-local')
  */
 export class CredentialHandlerLDLocal implements IAgentPlugin {
   private ldCredentialModule: LdCredentialModule
-  readonly schema = schema.IVcLocalIssuerJsonLd
+//  readonly schema = schema.IVcLocalIssuerJsonLd
   readonly methods: ICredentialHandlerLDLocal = {
     // test: this.createVerifiableCredentialLDLocal.bind(this),
     // We bind to existing methods as we can act as a drop in replacement. todo: Add config support for this mode
@@ -122,7 +122,7 @@ export class CredentialHandlerLDLocal implements IAgentPlugin {
     let managedKey: IKey | undefined
     let verificationMethod: string | undefined
     if (keyRef) {
-      const k = await this.keyStore?.get({ alias: keyRef })
+      const k = await this.keyStore?.getKey({ alias: keyRef })
       if (k?.privateKeyHex) {
         managedKey = {
           ...identifier.keys.find((k) => k.kid === keyRef),

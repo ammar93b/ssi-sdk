@@ -35,7 +35,7 @@ import {
 import { Resolvable } from 'did-resolver'
 import { KeyAlgo } from '@sphereon/ssi-sdk-core'
 
-const fetch = require('cross-fetch')
+import fetch from 'cross-fetch'
 
 export class OpSession {
   public readonly id: string

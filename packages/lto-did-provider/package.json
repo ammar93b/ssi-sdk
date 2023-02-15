@@ -14,12 +14,13 @@
     "@sphereon/did-uni-client": "^0.5.0",
     "@sphereon/lto-did-ts": "0.1.8-unstable.0",
     "@sphereon/ssi-sdk-core": "^0.8.0",
-    "@veramo/core": "4.2.0",
-    "@veramo/did-manager": "4.2.0",
-    "@veramo/kms-local": "4.2.0",
+    "@veramo/core": "5.0.0",
+    "@veramo/did-manager": "5.0.0",
+    "@veramo/kms-local": "5.0.0",
     "debug": "^4.1.1",
     "did-jwt-vc": "^2.1.8",
     "events": "^3.3.0",
+    "lto-api": "^0.5.14",
     "z-schema": "^5.0.2"
   },
   "devDependencies": {
@@ -32,7 +33,6 @@
   "files": [
     "dist/**/*",
     "src/**/*",
-    "plugin.schema.json",
     "README.md",
     "LICENSE"
   ],

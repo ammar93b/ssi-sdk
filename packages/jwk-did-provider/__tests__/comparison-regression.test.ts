@@ -7,7 +7,7 @@ import { DIDResolverPlugin } from '@veramo/did-resolver'
 import { Resolver } from 'did-resolver'
 import base64url from 'base64url'
 
-const method = require('@or13/did-jwk')
+import method = require('@or13/did-jwk')
 
 const DID_METHOD = 'did:jwk'
 

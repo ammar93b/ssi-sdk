@@ -16,7 +16,7 @@ export class SphereonJsonWebSignature2020 extends SphereonLdSignature {
   }
 
   getSupportedVeramoKeyType(): TKeyType {
-    return 'RSA'
+    return 'Secp256k1' // TODO Which?? We have  'Ed25519' | 'Secp256k1' | 'Secp256r1' | 'X25519' | 'Bls12381G1' | 'Bls12381G2' not RSA
   }
 
   async getSuiteForSigning(key: IKey, issuerDid: string, verificationMethodId: string, context: IAgentContext<RequiredAgentMethods>): Promise<any> {

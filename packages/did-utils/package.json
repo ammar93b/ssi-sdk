@@ -25,7 +25,6 @@
   "files": [
     "dist/**/*",
     "src/**/*",
-    "plugin.schema.json",
     "README.md",
     "LICENSE"
   ],

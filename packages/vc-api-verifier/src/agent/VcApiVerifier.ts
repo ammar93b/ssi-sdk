@@ -1,6 +1,6 @@
 import { IAgentPlugin } from '@veramo/core'
 
-import { schema } from '../index'
+// import { schema } from '../index'
 import { events, IRequiredContext, IVcApiVerifier, IVcApiVerifierArgs, IVerifyCredentialArgs, IVerifyCredentialResult } from '../types/IVcApiVerifier'
 
 import { fetch } from 'cross-fetch'
@@ -9,7 +9,7 @@ import { fetch } from 'cross-fetch'
  * {@inheritDoc IVcApiVerifier}
  */
 export class VcApiVerifier implements IAgentPlugin {
-  readonly schema = schema.IVcApiVerfierAgentPlugin
+  //readonly schema = schema.IVcApiVerfierAgentPlugin
   readonly methods: IVcApiVerifier = {
     verifyCredentialUsingVcApi: this.verifyCredentialUsingVcApi.bind(this),
   }

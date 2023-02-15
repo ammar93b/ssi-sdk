@@ -3,6 +3,10 @@
   "version": "0.8.0",
   "source": "src/index.ts",
   "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./dist/plugin.schema.json": "./dist/plugin.schema.json"
+  },
   "types": "dist/index.d.ts",
   "veramo": {
     "pluginInterfaces": {
@@ -11,15 +15,15 @@
   },
   "scripts": {
     "build": "tsc --build",
-    "generate-plugin-schema": "yarn veramo dev generate-plugin-schema"
+    "generate-plugin-schema": "pnpm veramo dev generate-plugin-schema"
   },
   "dependencies": {
-    "@veramo/core": "4.2.0",
+    "@veramo/core": "5.0.0",
     "cross-fetch": "^3.1.5"
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
-    "@veramo/cli": "4.2.0",
+    "@veramo/cli": "5.0.0",
     "jest": "^27.3.1",
     "prettier": "^2.4.1",
     "ts-jest": "^27.0.7",
@@ -29,7 +33,6 @@
     "dist/**/*",
     "src/**/*",
     "README.md",
-    "plugin.schema.json",
     "LICENSE"
   ],
   "publishConfig": {
