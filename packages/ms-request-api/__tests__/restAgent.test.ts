@@ -9,6 +9,7 @@ import { getConfig } from '@veramo/cli/build/setup'
 import { createObjects } from '@veramo/cli/build/lib/objectCreator'
 import { IMsRequestApi } from '../src/types/IMsRequestApi'
 import msRequestApiAgentLogic from './shared/msRequestApiAgentLogic'
+import { jest } from '@jest/globals'
 
 jest.setTimeout(30000)
 
@@ -32,7 +33,7 @@ const getAgent = (options?: IAgentOptions) =>
 
 const setup = async (): Promise<boolean> => {
   const config = getConfig('packages/ms-request-api/agent.yml')
-  const { agent } = createObjects(config, { agent: '/agent' })
+  const { agent } = await createObjects(config, { agent: '/agent' })
   serverAgent = agent
 
   const agentRouter = AgentRouter({

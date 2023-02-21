@@ -1,17 +1,18 @@
 import { getConfig } from '@veramo/cli/build/setup'
 import { createObjects } from '@veramo/cli/build/lib/objectCreator'
-import { Connection } from 'typeorm'
+import { DataSource } from 'typeorm'
+import { jest } from '@jest/globals'
 
 jest.setTimeout(30000)
 
 import connectionManagerAgentLogic from './shared/connectionManagerAgentLogic'
 
-let dbConnection: Promise<Connection>
+let dbConnection: Promise<DataSource>
 let agent: any
 
 const setup = async (): Promise<boolean> => {
   const config = getConfig('packages/connection-manager/agent.yml')
-  const { localAgent, db } = createObjects(config, { localAgent: '/agent', db: '/dbConnection' })
+  const { localAgent, db } = await createObjects(config, { localAgent: '/agent', db: '/dbConnection' })
   agent = localAgent
   dbConnection = db
   await (await dbConnection).dropDatabase()

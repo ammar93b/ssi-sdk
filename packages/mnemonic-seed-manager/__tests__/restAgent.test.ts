@@ -18,6 +18,7 @@ import storeSeed from './shared/storeMnemonicInfo'
 import { KeyManager } from '@veramo/key-manager'
 import { DataStore, DataStoreORM, Entities, KeyStore, migrations, PrivateKeyStore } from '@veramo/data-store'
 import { KeyManagementSystem, SecretBox } from '@veramo/kms-local'
+import { jest } from '@jest/globals'
 
 jest.setTimeout(30000)
 

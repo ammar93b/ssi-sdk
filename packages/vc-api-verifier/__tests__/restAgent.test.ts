@@ -11,6 +11,7 @@ import { IVcApiVerifier } from '../src/types/IVcApiVerifier'
 import { VcApiVerifier } from '../src/agent/VcApiVerifier'
 import vcApiVerifierAgentLogic from './shared/vcApiVerifierAgentLogic'
 import * as path from 'path'
+import { jest } from '@jest/globals'
 
 jest.setTimeout(30000)
 
@@ -36,7 +37,7 @@ const getAgent = (options?: IAgentOptions) =>
 
 const setup = async (): Promise<boolean> => {
   const config = getConfig(path.resolve('packages/vc-api-verifier/agent.yml'))
-  const { agent } = createObjects(config, { agent: '/agent' })
+  const { agent } = await createObjects(config, { agent: '/agent' })
   serverAgent = agent
 
   const agentRouter = AgentRouter({

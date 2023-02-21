@@ -1,8 +1,9 @@
 import * as fs from 'fs'
-import { getConfig } from '@veramo/cli/build/setup'
-import { createObjects } from '@veramo/cli/build/lib/objectCreator'
 import didAuthSiopOpAuthenticatorAgentLogic from './shared/didAuthSiopOpAuthenticatorAgentLogic'
 import { PresentationSignCallback } from '@sphereon/did-auth-siop'
+import { jest } from '@jest/globals'
+import { getConfig } from '@veramo/cli/build/setup'
+import { createObjects } from '@veramo/cli/build/lib/objectCreator'
 
 jest.setTimeout(30000)
 
@@ -28,7 +29,7 @@ const presentationSignCallback: PresentationSignCallback = async (args) => {
 const setup = async (): Promise<boolean> => {
   const config = getConfig('packages/did-auth-siop-op-authenticator/agent.yml')
   config.agent.$args[0].plugins[1].$args[0] = presentationSignCallback
-  const { localAgent } = createObjects(config, { localAgent: '/agent' })
+  const { localAgent } = await createObjects(config, { localAgent: '/agent' })
   agent = localAgent
 
   return true

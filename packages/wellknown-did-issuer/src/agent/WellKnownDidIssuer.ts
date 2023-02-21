@@ -10,7 +10,7 @@ import { IAgentPlugin, IIdentifier, VerifiableCredential } from '@veramo/core'
 import { OrPromise } from '@veramo/utils'
 import { normalizeCredential } from 'did-jwt-vc'
 import { Service } from 'did-resolver/lib/resolver'
-import { Connection } from 'typeorm'
+import { DataSource } from 'typeorm'
 import { v4 as uuidv4 } from 'uuid'
 import { DidConfigurationResourceEntity, createCredentialEntity, didConfigurationResourceFrom } from '../entities/DidConfigurationResourceEntity'
 import {
@@ -45,7 +45,7 @@ export class WellKnownDidIssuer implements IAgentPlugin {
   private readonly credentialIssuances: Record<string, IssuanceCallback>
   private readonly didConfigurationResourceRelations = ['linkedDids']
 
-  constructor(private dbConnection: OrPromise<Connection>, args?: IWellKnownDidIssuerOptionsArgs) {
+  constructor(private dbConnection: OrPromise<DataSource>, args?: IWellKnownDidIssuerOptionsArgs) {
     this.credentialIssuances = (args && args.credentialIssuances) || {}
   }
 

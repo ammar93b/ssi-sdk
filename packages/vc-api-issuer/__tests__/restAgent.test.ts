@@ -10,6 +10,7 @@ import { createObjects } from '@veramo/cli/build/lib/objectCreator'
 import { IVcApiIssuer } from '../src'
 import { VcApiIssuer } from '../src'
 import vcApiIssuerAgentLogic from './shared/vcApiIssuerAgentLogic'
+import { jest } from '@jest/globals'
 
 jest.setTimeout(30000)
 
@@ -42,7 +43,7 @@ const getAgent = (options?: IAgentOptions) =>
 const setup = async (): Promise<boolean> => {
   const config = getConfig('packages/vc-api-issuer/agent.yml')
   config.agent.$args[0].plugins[0].$args[0].authorizationToken = process.env.VC_HTTP_API_AUTH_TOKEN
-  const { agent } = createObjects(config, { agent: '/agent' })
+  const { agent } = await createObjects(config, { agent: '/agent' })
   serverAgent = agent
 
   const agentRouter = AgentRouter({

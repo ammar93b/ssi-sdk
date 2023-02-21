@@ -8,15 +8,13 @@
     "build": "tsc --build"
   },
   "dependencies": {
-    "typeorm": "^0.3.10",
+    "typeorm": "^0.3.11",
     "@scure/base": "^1.1.1",
     "@sphereon/ssi-types": "^0.8.0",
     "@veramo/core": "5.0.0"
   },
   "devDependencies": {
-    "@types/debug": "4.1.7",
-    "did-resolver": "^4.0.1",
-    "typescript": "4.6.4"
+    "did-resolver": "^4.0.1"
   },
   "files": [
     "dist/**/*",

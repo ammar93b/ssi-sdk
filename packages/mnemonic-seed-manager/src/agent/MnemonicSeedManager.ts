@@ -15,7 +15,7 @@ import {
   IPartialMnemonicVerificationArgs,
   IRequiredContext,
   ISeedGeneratorArgs,
-//  schema,
+  //  schema,
   UpdateResult,
 } from '../index'
 import { IMnemonicSeedManager } from '../types/IMnemonicSeedManager'
@@ -23,7 +23,7 @@ import { IMnemonicSeedManager } from '../types/IMnemonicSeedManager'
 import { MnemonicEntity } from '../entities/MnemonicEntity'
 
 export class MnemonicSeedManager implements IAgentPlugin {
-//  readonly schema = schema.IMnemonicInfoGenerator
+  //  readonly schema = schema.IMnemonicInfoGenerator
   readonly methods: IMnemonicSeedManager = {
     generateMnemonic: this.generateMnemonic.bind(this),
     generateSeed: this.generateSeed.bind(this),

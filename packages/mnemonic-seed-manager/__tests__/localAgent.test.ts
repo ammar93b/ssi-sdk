@@ -11,6 +11,7 @@ import { IMnemonicSeedManager, MnemonicSeedManager, MnemonicSeedManagerEntities,
 import { Entities, KeyStore, migrations, PrivateKeyStore } from '@veramo/data-store'
 import { KeyManagementSystem, SecretBox } from '@veramo/kms-local'
 import { OrPromise } from '@veramo/utils'
+import { jest } from '@jest/globals'
 
 jest.setTimeout(30000)
 

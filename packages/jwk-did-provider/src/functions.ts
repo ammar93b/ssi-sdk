@@ -6,7 +6,6 @@ import * as u8a from 'uint8arrays'
 import { ENC_KEY_ALGS, Key, KeyCurve, KeyType, KeyUse, SIG_KEY_ALGS } from './types/jwk-provider-types'
 import elliptic from 'elliptic'
 
-
 /**
  * Generates a random Private Hex Key for the specified key type
  * @param type The key type

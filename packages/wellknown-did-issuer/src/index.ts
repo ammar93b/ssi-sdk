@@ -3,6 +3,7 @@ import { DidConfigurationResourceEntity } from './entities/DidConfigurationResou
 /**
  * @public
  */
+// @ts-ignore
 import schema from './plugin.schema.json' assert { type: 'json' }
 export { schema }
 export { WellKnownDidIssuer } from './agent/WellKnownDidIssuer'

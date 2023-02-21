@@ -1,5 +1,5 @@
 import Debug from 'debug'
-import { Connection } from 'typeorm'
+import { DataSource } from 'typeorm'
 import { OrPromise } from '@veramo/utils'
 import {
   BaseConfigEntity,
@@ -43,9 +43,9 @@ export class ConnectionStore extends AbstractConnectionStore {
   private readonly party_relations = ['identifier', 'connections', 'connections.config', 'connections.metadata', 'connections.identifier']
   private readonly connection_relations = ['config', 'metadata', 'identifier']
 
-  private dbConnection: OrPromise<Connection>
+  private dbConnection: OrPromise<DataSource>
 
-  constructor(dbConnection: OrPromise<Connection>) {
+  constructor(dbConnection: OrPromise<DataSource>) {
     super()
     this.dbConnection = dbConnection
   }

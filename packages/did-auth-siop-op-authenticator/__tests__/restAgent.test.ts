@@ -6,15 +6,16 @@ import { IAgent, createAgent, IAgentOptions, IDataStore } from '@veramo/core'
 import { AgentRestClient } from '@veramo/remote-client'
 import { Server } from 'http'
 import { AgentRouter, RequestWithAgentRouter } from '@veramo/remote-server'
-import { getConfig } from '@veramo/cli/build/setup'
-import { createObjects } from '@veramo/cli/build/lib/objectCreator'
 import { DidAuthSiopOpAuthenticator, IDidAuthSiopOpAuthenticator } from '../src'
 import { Resolver } from 'did-resolver'
 import { getDidKeyResolver } from '@veramo/did-provider-key'
 import { DIDResolverPlugin } from '@veramo/did-resolver'
 import { getUniResolver } from '@sphereon/did-uni-client'
-import didAuthSiopOpAuthenticatorAgentLogic from './shared/didAuthSiopOpAuthenticatorAgentLogic'
+import didAuthSiopOpAuthenticatorAgentLogic from './shared/didAuthSiopOpAuthenticatorAgentLogic.js'
 import { PresentationSignCallback } from '@sphereon/did-auth-siop'
+import { jest } from '@jest/globals'
+import { getConfig } from '@veramo/cli/build/setup'
+import { createObjects } from '@veramo/cli/build/lib/objectCreator'
 
 jest.setTimeout(30000)
 
@@ -63,7 +64,7 @@ const getAgent = (options?: IAgentOptions) =>
 const setup = async (): Promise<boolean> => {
   const config = getConfig('packages/did-auth-siop-op-authenticator/agent.yml')
   config.agent.$args[0].plugins[1].$args[0] = presentationSignCallback
-  const { agent } = createObjects(config, { agent: '/agent' })
+  const { agent } = await createObjects(config, { agent: '/agent' })
   agent.registerCustomApprovalForSiop({ key: 'success', customApproval: () => Promise.resolve() })
   agent.registerCustomApprovalForSiop({ key: 'failure', customApproval: () => Promise.reject(new Error('denied')) })
   serverAgent = agent

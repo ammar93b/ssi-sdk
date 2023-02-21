@@ -12,6 +12,7 @@ import { LdDefaultContexts } from '../ld-default-contexts'
 import { SphereonBbsBlsSignature2020, SphereonEd25519Signature2018, SphereonEd25519Signature2020 } from '../suites'
 
 import vcHandlerLocalAgentLogic from './shared/vcHandlerLocalAgentLogic'
+import { jest } from '@jest/globals'
 
 jest.setTimeout(30000)
 
@@ -28,7 +29,7 @@ const setup = async (): Promise<boolean> => {
       new SphereonEd25519Signature2020(),
       new SphereonBbsBlsSignature2020(),
     ])
-  const { agent } = createObjects(config, { agent: '/agent' })
+  const { agent } = await createObjects(config, { agent: '/agent' })
   serverAgent = agent
 
   const agentRouter = AgentRouter({

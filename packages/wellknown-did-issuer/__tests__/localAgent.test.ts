@@ -1,16 +1,17 @@
 import { getConfig } from '@veramo/cli/build/setup'
 import { createObjects } from '@veramo/cli/build/lib/objectCreator'
-import { Connection } from 'typeorm'
+import { DataSource } from 'typeorm'
 import wellKnownDidIssuerAgentLogic from './shared/wellKnownDidIssuerAgentLogic'
+import { jest } from '@jest/globals'
 
 jest.setTimeout(30000)
 
 let agent: any
-let dbConnection: Promise<Connection>
+let dbConnection: Promise<DataSource>
 
 const setup = async (): Promise<boolean> => {
   const config = getConfig('packages/wellknown-did-issuer/agent.yml')
-  const { localAgent, db } = createObjects(config, { localAgent: '/agent', db: '/dbConnection' })
+  const { localAgent, db } = await createObjects(config, { localAgent: '/agent', db: '/dbConnection' })
   dbConnection = db
 
   const DID = 'did:key:z6MkoTHsgNNrby8JzCNQ1iRLyW5QQ6R8Xuu6AA8igGrMVPUM'

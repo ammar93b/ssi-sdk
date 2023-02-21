@@ -14,5 +14,12 @@
   "dtsRollup": {
     "enabled": true
   },
-  "mainEntryPointFilePath": "<projectFolder>/dist/index.d.ts"
+  "mainEntryPointFilePath": "<projectFolder>/dist/index.d.ts",
+  "messages": {
+    "extractorMessageReporting": {
+      "ae-wrong-input-file-type": {
+        "logLevel": "none"
+      }
+    }
+  }
 }

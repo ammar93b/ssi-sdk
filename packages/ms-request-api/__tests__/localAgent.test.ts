@@ -1,15 +1,16 @@
 import { getConfig } from '@veramo/cli/build/setup'
 import { createObjects } from '@veramo/cli/build/lib/objectCreator'
 import msRequestApiAgentLogic from './shared/msRequestApiAgentLogic'
+import { jest } from '@jest/globals'
 
 jest.setTimeout(30000)
 
-let agent: any
+let agents: any
 
 const setup = async (): Promise<boolean> => {
   const config = getConfig('packages/ms-request-api/agent.yml')
-  const { localAgent } = createObjects(config, { localAgent: '/agent' })
-  agent = localAgent
+  const { agent } = await createObjects(config, { localAgent: '/agent' })
+  agents = agent
   return true
 }
 
