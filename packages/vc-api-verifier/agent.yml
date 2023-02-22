@@ -14,9 +14,6 @@ server:
   port:
     $ref: /constants/port
   use:
-    # CORS
-    - - $require: 'cors'
-
     # Add agent to the request object
     - - $require: '@veramo/remote-server?t=function#RequestWithAgentRouter'
         $args:
