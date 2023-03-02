@@ -1,4 +1,5 @@
-import { DIDDocument, DIDDocumentSection, IAgentContext, IIdentifier, IResolver } from '@veramo/core'
+import { UniResolver } from '@sphereon/did-uni-client'
+import { DIDDocument, DIDDocumentSection, DIDResolutionResult, IAgentContext, IDIDManager, IIdentifier, IResolver } from '@veramo/core'
 import {
   _ExtendedIKey,
   _ExtendedVerificationMethod,
@@ -8,7 +9,7 @@ import {
   mapIdentifierKeysToDoc,
   resolveDidOrThrow,
 } from '@veramo/utils'
-import { VerificationMethod } from 'did-resolver'
+import { DIDResolutionOptions, Resolvable, VerificationMethod } from 'did-resolver'
 // @ts-ignore
 import elliptic from 'elliptic'
 import * as u8a from 'uint8arrays'
@@ -130,12 +131,15 @@ export function extractPublicKeyHexWithJwkSupport(pk: _ExtendedVerificationMetho
 export async function mapIdentifierKeysToDocWithJwkSupport(
   identifier: IIdentifier,
   section: DIDDocumentSection = 'keyAgreement',
-  context: IAgentContext<IResolver>
+  context: IAgentContext<IResolver>,
+  didDocument?: DIDDocument
 ): Promise<_ExtendedIKey[]> {
-  const keys = await mapIdentifierKeysToDoc(identifier, section, context)
-  const didDocument = await resolveDidOrThrow(identifier.did, context)
+  const rsaDidWeb = identifier.keys && identifier.keys.length > 0 && identifier.keys[0].type === 'RSA' && didDocument
+  // We skip mapping in case the identifier is RSA and a did document is supplied.
+  const keys = rsaDidWeb ? [] : await mapIdentifierKeysToDoc(identifier, section, context)
+  const didDoc = didDocument ? didDocument : await resolveDidOrThrow(identifier.did, context)
   // dereference all key agreement keys from DID document and normalize
-  const documentKeys: VerificationMethod[] = await dereferenceDidKeysWithJwkSupport(didDocument, section, context)
+  const documentKeys: VerificationMethod[] = await dereferenceDidKeysWithJwkSupport(didDoc, section, context)
 
   const localKeys = identifier.keys.filter(isDefined)
   // finally map the didDocument keys to the identifier keys by comparing `publicKeyHex`
@@ -155,4 +159,29 @@ export async function mapIdentifierKeysToDocWithJwkSupport(
     .filter(isDefined)
 
   return keys.concat(extendedKeys)
+}
+
+export async function getAgentDIDMethods(context: IAgentContext<IDIDManager>) {
+  return (await context.agent.didManagerGetProviders()).map((provider) => provider.toLowerCase().replace('did:', ''))
+}
+
+export class AgentDIDResolver implements Resolvable {
+  private readonly context: IAgentContext<IResolver>
+  private readonly uniresolverFallback: boolean
+
+  constructor(context: IAgentContext<IResolver>, uniresolverFallback?: boolean) {
+    this.context = context
+    this.uniresolverFallback = uniresolverFallback === true
+  }
+
+  async resolve(didUrl: string, options?: DIDResolutionOptions): Promise<DIDResolutionResult> {
+    try {
+      return this.context.agent.resolveDid({ didUrl, options })
+    } catch (error: unknown) {
+      if (this.uniresolverFallback) {
+        return new UniResolver().resolve(didUrl, options)
+      }
+      throw error
+    }
+  }
 }
