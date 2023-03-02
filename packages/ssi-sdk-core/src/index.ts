@@ -1,5 +1,5 @@
 export { flattenArray, flattenMigrations, multibaseToHex, hexToMultibase, MultibaseFormat } from './utils'
-export {
+export type {
   VerifiablePresentationSP,
   UnsignedPresentationSP,
   VerifiableCredentialSP,
