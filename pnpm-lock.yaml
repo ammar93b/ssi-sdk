@@ -9,7 +9,7 @@ overrides:
   '@veramo/utils': ^5.1.2
   '@veramo/did-manager': ^5.1.2
   '@veramo/kms-local': ^5.1.2
-  typescript: 4.9.5
+  typescript: ^4.9.5
 
 importers:
 
@@ -49,7 +49,7 @@ importers:
       ts-jest: ^29.0.5
       ts-json-schema-generator: ^0.97.0
       ts-node: ^10.9.1
-      typescript: 4.9.5
+      typescript: ^4.9.5
     devDependencies:
       '@digitalcredentials/jsonld': 5.2.1_tb7mk6b5yelqt4zuhthcmjlbfm
       '@jest/globals': 29.4.3
@@ -90,7 +90,7 @@ importers:
   packages/connection-manager:
     specifiers:
       '@sphereon/ssi-sdk-data-store-common': ^0.8.0
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': ^5.1.2
       '@veramo/core': ^5.1.2
       cross-fetch: ^3.1.5
       http: 0.0.1-security
@@ -101,7 +101,7 @@ importers:
       cross-fetch: 3.1.5
       typeorm: 0.3.11_pg@8.9.0
     devDependencies:
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
       http: 0.0.1-security
 
   packages/data-store:
@@ -137,10 +137,11 @@ importers:
       '@sphereon/pex': 1.1.5
       '@sphereon/ssi-sdk-core': ^0.8.0
       '@sphereon/ssi-types': ^0.8.0
-      '@veramo/cli': 5.0.0
+      '@sphereon/wellknown-dids-client': ^0.1.3-unstable.1
+      '@veramo/cli': ^5.1.2
       '@veramo/core': ^5.1.2
-      '@veramo/did-provider-key': 5.0.0
-      '@veramo/did-resolver': 5.0.0
+      '@veramo/did-provider-key': ^5.1.2
+      '@veramo/did-resolver': ^5.1.2
       '@veramo/utils': ^5.1.2
       cross-fetch: ^3.1.5
       did-resolver: ^4.0.1
@@ -151,20 +152,22 @@ importers:
       '@sphereon/pex': 1.1.5
       '@sphereon/ssi-sdk-core': link:../ssi-sdk-core
       '@sphereon/ssi-types': link:../ssi-types
+      '@sphereon/wellknown-dids-client': 0.1.3-unstable.1
       '@veramo/core': 5.1.2
       cross-fetch: 3.1.5
       uuid: 8.3.2
     devDependencies:
       '@sphereon/did-uni-client': 0.5.0
-      '@veramo/cli': 5.0.0
-      '@veramo/did-provider-key': 5.0.0
-      '@veramo/did-resolver': 5.0.0
+      '@veramo/cli': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
+      '@veramo/did-provider-key': 5.1.2
+      '@veramo/did-resolver': 5.1.2
       '@veramo/utils': 5.1.2
       did-resolver: 4.0.1
       nock: 13.3.0
 
   packages/did-utils:
     specifiers:
+      '@sphereon/did-uni-client': ^0.5.1-unstable.1
       '@sphereon/jsencrypt': 3.3.2-unstable.0
       '@sphereon/ssi-sdk-core': ^0.8.0
       '@sphereon/ssi-types': ^0.8.0
@@ -175,6 +178,7 @@ importers:
       elliptic: ^6.5.4
       uint8arrays: ^3.1.1
     dependencies:
+      '@sphereon/did-uni-client': 0.5.1-unstable.1
       '@sphereon/jsencrypt': 3.3.2-unstable.0
       '@sphereon/ssi-sdk-core': link:../ssi-sdk-core
       '@sphereon/ssi-types': link:../ssi-types
@@ -190,12 +194,12 @@ importers:
     specifiers:
       '@sphereon/did-uni-client': ^0.5.0
       '@sphereon/ssi-sdk-core': ^0.8.0
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': ^5.1.2
       '@veramo/core': ^5.1.2
       '@veramo/data-store': ^5.1.2
       '@veramo/did-manager': ^5.1.2
-      '@veramo/did-resolver': 5.0.0
-      '@veramo/key-manager': 5.0.0
+      '@veramo/did-resolver': ^5.1.2
+      '@veramo/key-manager': ^5.1.2
       '@veramo/kms-local': ^5.1.2
       debug: ^4.1.1
       did-jwt-vc: ^2.1.7
@@ -212,10 +216,10 @@ importers:
       events: 3.3.0
       z-schema: 5.0.5
     devDependencies:
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
       '@veramo/data-store': 5.1.2_pg@8.9.0
-      '@veramo/did-resolver': 5.0.0
-      '@veramo/key-manager': 5.0.0
+      '@veramo/did-resolver': 5.1.2
+      '@veramo/key-manager': 5.1.2
       '@veramo/kms-local': 5.1.2
       did-resolver: 4.0.1
 
@@ -227,8 +231,8 @@ importers:
       '@stablelib/ed25519': ^1.0.2
       '@veramo/core': ^5.1.2
       '@veramo/did-manager': ^5.1.2
-      '@veramo/did-resolver': 5.0.0
-      '@veramo/key-manager': 5.0.0
+      '@veramo/did-resolver': ^5.1.2
+      '@veramo/key-manager': ^5.1.2
       '@veramo/kms-local': ^5.1.2
       base64url: ^3.0.1
       debug: ^4.1.1
@@ -248,8 +252,8 @@ importers:
       uint8arrays: 3.1.1
     devDependencies:
       '@or13/did-jwk': 0.0.4
-      '@veramo/did-resolver': 5.0.0
-      '@veramo/key-manager': 5.0.0
+      '@veramo/did-resolver': 5.1.2
+      '@veramo/key-manager': 5.1.2
       '@veramo/kms-local': 5.1.2
       did-resolver: 4.0.1
       jose: 4.12.0
@@ -292,10 +296,10 @@ importers:
   packages/mnemonic-seed-manager:
     specifiers:
       '@types/bip39': ^3.0.0
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': ^5.1.2
       '@veramo/core': ^5.1.2
       '@veramo/data-store': ^5.1.2
-      '@veramo/key-manager': 5.0.0
+      '@veramo/key-manager': ^5.1.2
       '@veramo/kms-local': ^5.1.2
       '@veramo/utils': ^5.1.2
       bip39: ^3.0.4
@@ -305,7 +309,7 @@ importers:
     dependencies:
       '@veramo/core': 5.1.2
       '@veramo/data-store': 5.1.2_pg@8.9.0
-      '@veramo/key-manager': 5.0.0
+      '@veramo/key-manager': 5.1.2
       '@veramo/kms-local': 5.1.2
       '@veramo/utils': 5.1.2
       bip39: 3.0.4
@@ -313,14 +317,14 @@ importers:
       typeorm: 0.3.11_pg@8.9.0
     devDependencies:
       '@types/bip39': 3.0.0
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
       ed25519-hd-key: 1.3.0
 
   packages/ms-authenticator:
     specifiers:
       '@azure/msal-common': ^7.0.0
       '@azure/msal-node': ^1.10.0
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': ^5.1.2
       '@veramo/core': ^5.1.2
       cross-fetch: ^3.1.5
     dependencies:
@@ -329,13 +333,13 @@ importers:
       '@veramo/core': 5.1.2
       cross-fetch: 3.1.5
     devDependencies:
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
 
   packages/ms-request-api:
     specifiers:
       '@sphereon/ms-authenticator': ^0.8.0
       '@types/express-session': ^1.17.4
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': ^5.1.2
       '@veramo/core': ^5.1.2
       cross-fetch: ^3.1.5
       express: ^4.17.1
@@ -352,7 +356,7 @@ importers:
       typeorm: 0.3.11_pg@8.9.0
     devDependencies:
       '@types/express-session': 1.17.6
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
 
   packages/ssi-sdk-core:
     specifiers:
@@ -381,7 +385,7 @@ importers:
   packages/vc-api-issuer:
     specifiers:
       '@sphereon/ssi-sdk-core': ^0.8.1-next.121
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': ^5.1.2
       '@veramo/core': ^5.1.2
       cross-fetch: ^3.1.5
     dependencies:
@@ -389,18 +393,18 @@ importers:
       '@veramo/core': 5.1.2
       cross-fetch: 3.1.5
     devDependencies:
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
 
   packages/vc-api-verifier:
     specifiers:
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': ^5.1.2
       '@veramo/core': ^5.1.2
       cross-fetch: ^3.1.5
     dependencies:
       '@veramo/core': 5.1.2
       cross-fetch: 3.1.5
     devDependencies:
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
 
   packages/vc-handler-ld-local:
     specifiers:
@@ -433,14 +437,14 @@ importers:
       '@types/node': ^14.14.43
       '@typescript-eslint/eslint-plugin': ^4.31.1
       '@typescript-eslint/parser': ^4.31.1
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': ^5.1.2
       '@veramo/core': ^5.1.2
       '@veramo/credential-w3c': ^5.1.2
       '@veramo/data-store': ^5.1.2
       '@veramo/did-manager': ^5.1.2
-      '@veramo/did-provider-key': 5.0.0
-      '@veramo/did-resolver': 5.0.0
-      '@veramo/key-manager': 5.0.0
+      '@veramo/did-provider-key': ^5.1.2
+      '@veramo/did-resolver': ^5.1.2
+      '@veramo/key-manager': ^5.1.2
       '@veramo/kms-local': ^5.1.2
       '@veramo/utils': ^5.1.2
       copyfiles: ^2.4.1
@@ -499,13 +503,13 @@ importers:
       '@types/nock': 11.1.0
       '@typescript-eslint/eslint-plugin': 4.33.0_s2qqtxhzmb7vugvfoyripfgp7i
       '@typescript-eslint/parser': 4.33.0_jofidmxrjzhj7l6vknpw5ecvfe
-      '@veramo/cli': 5.0.0_6es77r7fpqcuivmurrv2scwgiy
+      '@veramo/cli': 5.1.2_6es77r7fpqcuivmurrv2scwgiy
       '@veramo/credential-w3c': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
       '@veramo/data-store': 5.1.2_pg@8.9.0+ts-node@10.9.1
       '@veramo/did-manager': 5.1.2
-      '@veramo/did-provider-key': 5.0.0
-      '@veramo/did-resolver': 5.0.0
-      '@veramo/key-manager': 5.0.0
+      '@veramo/did-provider-key': 5.1.2
+      '@veramo/did-resolver': 5.1.2
+      '@veramo/key-manager': 5.1.2
       '@veramo/kms-local': 5.1.2
       copyfiles: 2.4.1
       did-resolver: 4.0.1
@@ -518,7 +522,7 @@ importers:
       '@types/jest': ^29.2.4
       '@types/react': ^18.0.26
       '@types/uuid': ^8.3.4
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': ^5.1.2
       '@veramo/core': ^5.1.2
       base64url: ^3.0.1
       global-jsdom: ^8.6.0
@@ -529,7 +533,7 @@ importers:
       react-dom: ^18.2.0
       react-qr-code: ^2.0.11
       ts-jest: ^29.0.3
-      typescript: 4.9.5
+      typescript: ^4.9.5
     dependencies:
       '@veramo/core': 5.1.2
       base64url: 3.0.1
@@ -541,7 +545,7 @@ importers:
       '@types/jest': 29.4.0
       '@types/react': 18.0.28
       '@types/uuid': 8.3.4
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
       global-jsdom: 8.7.0_jsdom@20.0.3
       jest: 29.4.3
       jest-environment-jsdom: 29.4.3
@@ -554,7 +558,7 @@ importers:
     specifiers:
       '@sphereon/ssi-types': ^0.8.0
       '@sphereon/wellknown-dids-client': ^0.1.3-unstable.1
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': ^5.1.2
       '@veramo/core': ^5.1.2
       '@veramo/data-store': ^5.1.2
       '@veramo/utils': ^5.1.2
@@ -573,21 +577,21 @@ importers:
       typeorm: 0.3.11_pg@8.9.0
       uuid: 8.3.2
     devDependencies:
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
       did-resolver: 4.0.1
       nock: 13.3.0
 
   packages/wellknown-did-verifier:
     specifiers:
       '@sphereon/wellknown-dids-client': ^0.1.3-unstable.1
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': ^5.1.2
       '@veramo/core': ^5.1.2
       nock: ^13.2.9
     dependencies:
       '@sphereon/wellknown-dids-client': 0.1.3-unstable.1
       '@veramo/core': 5.1.2
     devDependencies:
-      '@veramo/cli': 5.0.0
+      '@veramo/cli': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
       nock: 13.3.0
 
 packages:
@@ -1985,22 +1989,6 @@ packages:
       - web-streams-polyfill
     dev: false
 
-  /@digitalcredentials/ed25519-signature-2020/3.0.2:
-    resolution: {integrity: sha512-R8IrR21Dh+75CYriQov3nVHKaOVusbxfk9gyi6eCAwLHKn6fllUt+2LQfuUrL7Ts/sGIJqQcev7YvkX9GvyYRA==}
-    engines: {node: '>=14'}
-    dependencies:
-      '@digitalcredentials/base58-universal': 1.0.1
-      '@digitalcredentials/ed25519-verification-key-2020': 3.2.2
-      '@digitalcredentials/jsonld-signatures': 9.3.1
-      ed25519-signature-2018-context: 1.1.0
-      ed25519-signature-2020-context: 1.1.0
-    transitivePeerDependencies:
-      - domexception
-      - expo
-      - react-native
-      - web-streams-polyfill
-    dev: true
-
   /@digitalcredentials/ed25519-signature-2020/3.0.2_tb7mk6b5yelqt4zuhthcmjlbfm:
     resolution: {integrity: sha512-R8IrR21Dh+75CYriQov3nVHKaOVusbxfk9gyi6eCAwLHKn6fllUt+2LQfuUrL7Ts/sGIJqQcev7YvkX9GvyYRA==}
     engines: {node: '>=14'}
@@ -2044,22 +2032,6 @@ packages:
       - domexception
       - web-streams-polyfill
 
-  /@digitalcredentials/jsonld-signatures/9.3.1:
-    resolution: {integrity: sha512-YMh1e1GpTeHDqq2a2Kd+pLcHsMiPeKyE2Zs17NSwqckij7UMRVDQ54S5VQhHvoXZ1mlkpVaI2xtj5M5N6rzylw==}
-    engines: {node: '>=12'}
-    dependencies:
-      '@digitalbazaar/security-context': 1.0.0
-      '@digitalcredentials/jsonld': 5.2.1
-      fast-text-encoding: 1.0.6
-      isomorphic-webcrypto: 2.3.8
-      serialize-error: 8.1.0
-    transitivePeerDependencies:
-      - domexception
-      - expo
-      - react-native
-      - web-streams-polyfill
-    dev: true
-
   /@digitalcredentials/jsonld-signatures/9.3.1_tb7mk6b5yelqt4zuhthcmjlbfm:
     resolution: {integrity: sha512-YMh1e1GpTeHDqq2a2Kd+pLcHsMiPeKyE2Zs17NSwqckij7UMRVDQ54S5VQhHvoXZ1mlkpVaI2xtj5M5N6rzylw==}
     engines: {node: '>=12'}
@@ -2074,21 +2046,6 @@ packages:
       - expo
       - react-native
       - web-streams-polyfill
-
-  /@digitalcredentials/jsonld/5.2.1:
-    resolution: {integrity: sha512-pDiO1liw8xs+J/43qnMZsxyz0VOWOb7Q2yUlBt/tyjq6SlT9xPo+3716tJPbjGPnou2lQRw3H5/I++z+6oQ07w==}
-    engines: {node: '>=12'}
-    dependencies:
-      '@digitalcredentials/http-client': 1.2.2
-      '@digitalcredentials/rdf-canonize': 1.0.0
-      canonicalize: 1.0.8
-      lru-cache: 6.0.0
-    transitivePeerDependencies:
-      - domexception
-      - expo
-      - react-native
-      - web-streams-polyfill
-    dev: true
 
   /@digitalcredentials/jsonld/5.2.1_tb7mk6b5yelqt4zuhthcmjlbfm:
     resolution: {integrity: sha512-pDiO1liw8xs+J/43qnMZsxyz0VOWOb7Q2yUlBt/tyjq6SlT9xPo+3716tJPbjGPnou2lQRw3H5/I++z+6oQ07w==}
@@ -2116,17 +2073,6 @@ packages:
       lru-cache: 6.0.0
     dev: false
 
-  /@digitalcredentials/rdf-canonize/1.0.0:
-    resolution: {integrity: sha512-z8St0Ex2doecsExCFK1uI4gJC+a5EqYYu1xpRH1pKmqSS9l/nxfuVxexNFyaeEum4dUdg1EetIC2rTwLIFhPRA==}
-    engines: {node: '>=12'}
-    dependencies:
-      fast-text-encoding: 1.0.6
-      isomorphic-webcrypto: 2.3.8
-    transitivePeerDependencies:
-      - expo
-      - react-native
-    dev: true
-
   /@digitalcredentials/rdf-canonize/1.0.0_tb7mk6b5yelqt4zuhthcmjlbfm:
     resolution: {integrity: sha512-z8St0Ex2doecsExCFK1uI4gJC+a5EqYYu1xpRH1pKmqSS9l/nxfuVxexNFyaeEum4dUdg1EetIC2rTwLIFhPRA==}
     engines: {node: '>=12'}
@@ -2136,20 +2082,6 @@ packages:
     transitivePeerDependencies:
       - expo
       - react-native
-
-  /@digitalcredentials/vc/5.0.0:
-    resolution: {integrity: sha512-87ARRxlAdIuUPArbMYJ8vUY7QqkIvJGFrBwfTH1PcB8Wz1E/M4q3oc/WLrDyJNg4o/irVVB5gkA9iIntTYSpoA==}
-    engines: {node: '>=12'}
-    dependencies:
-      '@digitalcredentials/jsonld': 5.2.1
-      '@digitalcredentials/jsonld-signatures': 9.3.1
-      credentials-context: 2.0.0
-    transitivePeerDependencies:
-      - domexception
-      - expo
-      - react-native
-      - web-streams-polyfill
-    dev: true
 
   /@digitalcredentials/vc/5.0.0_tb7mk6b5yelqt4zuhthcmjlbfm:
     resolution: {integrity: sha512-87ARRxlAdIuUPArbMYJ8vUY7QqkIvJGFrBwfTH1PcB8Wz1E/M4q3oc/WLrDyJNg4o/irVVB5gkA9iIntTYSpoA==}
@@ -6380,100 +6312,8 @@ packages:
       wonka: 4.0.15
     optional: true
 
-  /@veramo/cli/5.0.0:
-    resolution: {integrity: sha512-IUdF2Cn+OYw96efmd6DOP7AMoSQ950nGoOTuW5fNtSc2MzJHEecDKZhmr/LJUa9ntZ9IVTxGEKzsmrGP7l/IWg==}
-    hasBin: true
-    dependencies:
-      '@microsoft/api-extractor': 7.34.4
-      '@microsoft/api-extractor-model': 7.26.4
-      '@transmute/credentials-context': 0.7.0-unstable.80
-      '@types/blessed': 0.1.20
-      '@types/swagger-ui-express': 4.1.3
-      '@veramo/core': 5.1.2
-      '@veramo/core-types': 5.0.0
-      '@veramo/credential-eip712': 5.0.0
-      '@veramo/credential-ld': 5.1.2
-      '@veramo/credential-w3c': 5.1.2
-      '@veramo/data-store': 5.1.2_pg@8.9.0+sqlite3@5.1.4
-      '@veramo/did-comm': 5.0.0
-      '@veramo/did-discovery': 5.0.0
-      '@veramo/did-jwt': 5.1.2
-      '@veramo/did-manager': 5.1.2
-      '@veramo/did-provider-ethr': 5.0.0
-      '@veramo/did-provider-key': 5.0.0
-      '@veramo/did-provider-web': 5.0.0
-      '@veramo/did-resolver': 5.0.0
-      '@veramo/key-manager': 5.0.0
-      '@veramo/kms-local': 5.1.2
-      '@veramo/message-handler': 5.0.0
-      '@veramo/remote-client': 5.1.2
-      '@veramo/remote-server': 5.1.2_express@4.18.2
-      '@veramo/selective-disclosure': 5.0.0
-      '@veramo/url-handler': 5.0.0
-      '@veramo/utils': 5.1.2
-      blessed: 0.1.81
-      commander: 9.5.0
-      console-table-printer: 2.11.1
-      cors: 2.8.5
-      cross-fetch: 3.1.5
-      date-fns: 2.29.3
-      debug: 4.3.4
-      did-resolver: 4.0.1
-      dotenv: 16.0.3
-      ethr-did-resolver: 8.0.0
-      express: 4.18.2
-      express-handlebars: 6.0.7
-      fuzzy: 0.1.3
-      handlebars: 4.7.7
-      inquirer: 9.1.4
-      inquirer-autocomplete-prompt: 3.0.0_inquirer@9.1.4
-      json-schema: 0.4.0
-      json5: 2.2.3
-      jsonpointer: 5.0.1
-      oas-resolver: 2.5.6
-      openapi-types: 12.1.0
-      passport: 0.6.0
-      passport-http-bearer: 1.0.1
-      pg: 8.9.0
-      qrcode-terminal: 0.12.0
-      sqlite3: 5.1.4
-      swagger-ui-express: 4.6.1_express@4.18.2
-      ts-json-schema-generator: 1.2.0
-      typeorm: 0.3.11_pg@8.9.0+sqlite3@5.1.4
-      url-parse: 1.5.10
-      web-did-resolver: 2.0.21
-      ws: 8.12.1
-      yaml: 2.2.1
-    transitivePeerDependencies:
-      - '@google-cloud/spanner'
-      - '@sap/hana-client'
-      - '@types/node'
-      - better-sqlite3
-      - bluebird
-      - bufferutil
-      - domexception
-      - encoding
-      - expo
-      - hdb-pool
-      - ioredis
-      - mongodb
-      - mssql
-      - mysql2
-      - oracledb
-      - pg-native
-      - pg-query-stream
-      - react-native
-      - redis
-      - sql.js
-      - supports-color
-      - ts-node
-      - typeorm-aurora-data-api-driver
-      - utf-8-validate
-      - web-streams-polyfill
-    dev: true
-
-  /@veramo/cli/5.0.0_6es77r7fpqcuivmurrv2scwgiy:
-    resolution: {integrity: sha512-IUdF2Cn+OYw96efmd6DOP7AMoSQ950nGoOTuW5fNtSc2MzJHEecDKZhmr/LJUa9ntZ9IVTxGEKzsmrGP7l/IWg==}
+  /@veramo/cli/5.1.2_6es77r7fpqcuivmurrv2scwgiy:
+    resolution: {integrity: sha512-id5GiUxu27irOxrF6lkqDqo7KJDyy0lbkB8P6SSMfeTiDh2xIoES/oUavZApNI3nRJt602svYFt1j4ZYrN2J+A==}
     hasBin: true
     dependencies:
       '@microsoft/api-extractor': 7.34.4_@types+node@14.18.36
@@ -6482,29 +6322,30 @@ packages:
       '@types/blessed': 0.1.20
       '@types/swagger-ui-express': 4.1.3
       '@veramo/core': 5.1.2
-      '@veramo/core-types': 5.0.0
-      '@veramo/credential-eip712': 5.0.0
+      '@veramo/core-types': 5.1.2
+      '@veramo/credential-eip712': 5.1.2
       '@veramo/credential-ld': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
       '@veramo/credential-w3c': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
       '@veramo/data-store': 5.1.2_o7g77mox2w73lfzyynaupmt6wm
-      '@veramo/did-comm': 5.0.0
-      '@veramo/did-discovery': 5.0.0
+      '@veramo/did-comm': 5.1.2
+      '@veramo/did-discovery': 5.1.2
       '@veramo/did-jwt': 5.1.2
       '@veramo/did-manager': 5.1.2
-      '@veramo/did-provider-ethr': 5.0.0
-      '@veramo/did-provider-key': 5.0.0
-      '@veramo/did-provider-web': 5.0.0
-      '@veramo/did-resolver': 5.0.0
-      '@veramo/key-manager': 5.0.0
+      '@veramo/did-provider-ethr': 5.1.2
+      '@veramo/did-provider-key': 5.1.2
+      '@veramo/did-provider-pkh': 5.1.2
+      '@veramo/did-provider-web': 5.1.2
+      '@veramo/did-resolver': 5.1.2
+      '@veramo/key-manager': 5.1.2
       '@veramo/kms-local': 5.1.2
-      '@veramo/message-handler': 5.0.0
+      '@veramo/message-handler': 5.1.2
       '@veramo/remote-client': 5.1.2
       '@veramo/remote-server': 5.1.2_express@4.18.2
-      '@veramo/selective-disclosure': 5.0.0
-      '@veramo/url-handler': 5.0.0
+      '@veramo/selective-disclosure': 5.1.2
+      '@veramo/url-handler': 5.1.2
       '@veramo/utils': 5.1.2
       blessed: 0.1.81
-      commander: 9.5.0
+      commander: 10.0.0
       console-table-printer: 2.11.1
       cors: 2.8.5
       cross-fetch: 3.1.5
@@ -6564,15 +6405,98 @@ packages:
       - web-streams-polyfill
     dev: true
 
-  /@veramo/core-types/5.0.0:
-    resolution: {integrity: sha512-aD3mhnKpZ6ygb0W2EbRqLpYOixal04FKOcWPqnDDavKeG5vt2+g/FdHSCftm5cwUnjD3WYGcMibxAjxqqudoaQ==}
+  /@veramo/cli/5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm:
+    resolution: {integrity: sha512-id5GiUxu27irOxrF6lkqDqo7KJDyy0lbkB8P6SSMfeTiDh2xIoES/oUavZApNI3nRJt602svYFt1j4ZYrN2J+A==}
+    hasBin: true
     dependencies:
-      credential-status: 2.0.5
+      '@microsoft/api-extractor': 7.34.4
+      '@microsoft/api-extractor-model': 7.26.4
+      '@transmute/credentials-context': 0.7.0-unstable.80
+      '@types/blessed': 0.1.20
+      '@types/swagger-ui-express': 4.1.3
+      '@veramo/core': 5.1.2
+      '@veramo/core-types': 5.1.2
+      '@veramo/credential-eip712': 5.1.2
+      '@veramo/credential-ld': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
+      '@veramo/credential-w3c': 5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm
+      '@veramo/data-store': 5.1.2_pg@8.9.0+sqlite3@5.1.4
+      '@veramo/did-comm': 5.1.2
+      '@veramo/did-discovery': 5.1.2
+      '@veramo/did-jwt': 5.1.2
+      '@veramo/did-manager': 5.1.2
+      '@veramo/did-provider-ethr': 5.1.2
+      '@veramo/did-provider-key': 5.1.2
+      '@veramo/did-provider-pkh': 5.1.2
+      '@veramo/did-provider-web': 5.1.2
+      '@veramo/did-resolver': 5.1.2
+      '@veramo/key-manager': 5.1.2
+      '@veramo/kms-local': 5.1.2
+      '@veramo/message-handler': 5.1.2
+      '@veramo/remote-client': 5.1.2
+      '@veramo/remote-server': 5.1.2_express@4.18.2
+      '@veramo/selective-disclosure': 5.1.2
+      '@veramo/url-handler': 5.1.2
+      '@veramo/utils': 5.1.2
+      blessed: 0.1.81
+      commander: 10.0.0
+      console-table-printer: 2.11.1
+      cors: 2.8.5
+      cross-fetch: 3.1.5
+      date-fns: 2.29.3
       debug: 4.3.4
-      did-jwt-vc: 3.1.1
       did-resolver: 4.0.1
+      dotenv: 16.0.3
+      ethr-did-resolver: 8.0.0
+      express: 4.18.2
+      express-handlebars: 6.0.7
+      fuzzy: 0.1.3
+      handlebars: 4.7.7
+      inquirer: 9.1.4
+      inquirer-autocomplete-prompt: 3.0.0_inquirer@9.1.4
+      json-schema: 0.4.0
+      json5: 2.2.3
+      jsonpointer: 5.0.1
+      oas-resolver: 2.5.6
+      openapi-types: 12.1.0
+      passport: 0.6.0
+      passport-http-bearer: 1.0.1
+      pg: 8.9.0
+      qrcode-terminal: 0.12.0
+      sqlite3: 5.1.4
+      swagger-ui-express: 4.6.1_express@4.18.2
+      ts-json-schema-generator: 1.2.0
+      typeorm: 0.3.11_pg@8.9.0+sqlite3@5.1.4
+      url-parse: 1.5.10
+      web-did-resolver: 2.0.21
+      ws: 8.12.1
+      yaml: 2.2.1
     transitivePeerDependencies:
+      - '@google-cloud/spanner'
+      - '@sap/hana-client'
+      - '@types/node'
+      - better-sqlite3
+      - bluebird
+      - bufferutil
+      - domexception
+      - encoding
+      - expo
+      - hdb-pool
+      - ioredis
+      - mongodb
+      - mssql
+      - mysql2
+      - oracledb
+      - pg-native
+      - pg-query-stream
+      - react-native
+      - redis
+      - sql.js
       - supports-color
+      - ts-node
+      - typeorm-aurora-data-api-driver
+      - utf-8-validate
+      - web-streams-polyfill
+    dev: true
 
   /@veramo/core-types/5.1.2:
     resolution: {integrity: sha512-IVmbcn9yBE8v/x29nGvScCT9sIKu/iYJ8+dqN3jIVL2t//HRvNhrHsxw83Wb6DGqr46r0ebM+kEnPfZAAxdk/w==}
@@ -6594,8 +6518,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@veramo/credential-eip712/5.0.0:
-    resolution: {integrity: sha512-cXd63GsghEiduu8hhR/XHau7OCU7vmfNSAv80S3pe4lziX47ZRNBo61+bGDEYXEfxU7gV9qOoCQF1Fug2zCgGw==}
+  /@veramo/credential-eip712/5.1.2:
+    resolution: {integrity: sha512-cPNUqmrBJIvVgWxIXhhjM20LXyo6cPO5/yDCxtNfmfOMdL4Bxf0lKZ+dnTM2ZJLvCit6Js/6IZSMFieEb6goOg==}
     dependencies:
       '@metamask/eth-sig-util': 5.0.2
       '@veramo/core-types': 5.1.2
@@ -6605,33 +6529,6 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
-    dev: true
-
-  /@veramo/credential-ld/5.1.2:
-    resolution: {integrity: sha512-cq+UcFIEIAUIT0aQbDWBkbGdg5+utyGgYhmekBTRsbXUuDO0TC25HNK4ceYuL+FRPaYHl24vPUuKd609if2L7w==}
-    dependencies:
-      '@digitalcredentials/ed25519-signature-2020': 3.0.2
-      '@digitalcredentials/ed25519-verification-key-2020': 4.0.0
-      '@digitalcredentials/jsonld': 5.2.1
-      '@digitalcredentials/jsonld-signatures': 9.3.1
-      '@digitalcredentials/vc': 5.0.0
-      '@transmute/credentials-context': 0.7.0-unstable.80
-      '@transmute/ed25519-signature-2018': 0.7.0-unstable.80
-      '@transmute/json-web-signature': 0.7.0-unstable.80
-      '@veramo-community/lds-ecdsa-secp256k1-recovery2020': github.com/uport-project/EcdsaSecp256k1RecoverySignature2020/ab0db52de6f4e6663ef271a48009ba26e688ef9b
-      '@veramo/core-types': 5.1.2
-      '@veramo/utils': 5.1.2
-      cross-fetch: 3.1.5
-      debug: 4.3.4
-      did-resolver: 4.0.1
-      uint8arrays: 3.1.1
-    transitivePeerDependencies:
-      - domexception
-      - encoding
-      - expo
-      - react-native
-      - supports-color
-      - web-streams-polyfill
     dev: true
 
   /@veramo/credential-ld/5.1.2_tb7mk6b5yelqt4zuhthcmjlbfm:
@@ -6652,30 +6549,6 @@ packages:
       debug: 4.3.4
       did-resolver: 4.0.1
       uint8arrays: 3.1.1
-    transitivePeerDependencies:
-      - domexception
-      - encoding
-      - expo
-      - react-native
-      - supports-color
-      - web-streams-polyfill
-    dev: true
-
-  /@veramo/credential-w3c/5.1.2:
-    resolution: {integrity: sha512-1sVDVxFWHwpSdeEgIWmHtUiIy0aDFKMPgEn+d02xGDhXnWlyUdT5OCDLULsKDma/owajkq0RTrbeSpe+63+0pg==}
-    dependencies:
-      '@veramo/core-types': 5.1.2
-      '@veramo/message-handler': 5.1.2
-      '@veramo/utils': 5.1.2
-      canonicalize: 1.0.8
-      debug: 4.3.4
-      did-jwt: 6.11.1
-      did-jwt-vc: 3.1.1
-      did-resolver: 4.0.1
-      uint8arrays: 3.1.1
-      uuid: 9.0.0
-    optionalDependencies:
-      '@veramo/credential-ld': 5.1.2
     transitivePeerDependencies:
       - domexception
       - encoding
@@ -6844,13 +6717,13 @@ packages:
       - typeorm-aurora-data-api-driver
     dev: true
 
-  /@veramo/did-comm/5.0.0:
-    resolution: {integrity: sha512-SVwWYS+ZqMJSRcLo4NV2qzD1GpQ4LL1b9Sedl7JtJK7f/A+q6xWcwa2dwd7KD0FTZsXIe2wpAGOmLdNtk0AhgQ==}
+  /@veramo/did-comm/5.1.2:
+    resolution: {integrity: sha512-VNIVgTz+U1/YUfnGwlwfl4CAbU5nBU7uKu4UF8Y6FmavzHdRwVBB9jblBchoqtRwLY5r8ukpwFWD2HylzS03vA==}
     dependencies:
       '@ethersproject/signing-key': 5.7.0
       '@stablelib/ed25519': 1.0.3
       '@veramo/core-types': 5.1.2
-      '@veramo/message-handler': 5.0.0
+      '@veramo/message-handler': 5.1.2
       '@veramo/utils': 5.1.2
       cross-fetch: 3.1.5
       debug: 4.3.4
@@ -6860,15 +6733,6 @@ packages:
       uuid: 9.0.0
     transitivePeerDependencies:
       - encoding
-      - supports-color
-    dev: true
-
-  /@veramo/did-discovery/5.0.0:
-    resolution: {integrity: sha512-TVWx23dnsNLm8wJ0Ayr5XqgE/EEU7qrwkP6NZuJ7QlxxmUnDkHHq/vI9t/mtZGcAJ30REN0pQGt1zcdrAh/vsA==}
-    dependencies:
-      '@veramo/core-types': 5.1.2
-      debug: 4.3.4
-    transitivePeerDependencies:
       - supports-color
     dev: true
 
@@ -6900,8 +6764,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@veramo/did-provider-ethr/5.0.0:
-    resolution: {integrity: sha512-FoQ+4bDoba5sG28EyCRixflDEnPyLWUaD4S4bu4pW1Zmk0X97vpqYIMEYiWCwFryLjCJHafNwF0YsFJJOrwpnw==}
+  /@veramo/did-provider-ethr/5.1.2:
+    resolution: {integrity: sha512-bsecW15NkgU5edYehJprzeOzEX4eStFqvrD2L+scb9p+pwIc5587WCkaVP6dlWnerv03tlFgN+eRxe1EJl0TWQ==}
     dependencies:
       '@ethersproject/abstract-provider': 5.7.0
       '@ethersproject/abstract-signer': 5.7.0
@@ -6922,8 +6786,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@veramo/did-provider-key/5.0.0:
-    resolution: {integrity: sha512-wKvCrUZdG9GjV+oW1sgcsXJ+lCk26pEmiqT5Yh1t8OG/yV7OCAwNg1NkCsX7EcODYd/OhGBDlIPYk7aI43uR1A==}
+  /@veramo/did-provider-key/5.1.2:
+    resolution: {integrity: sha512-BvrGCmZ5eyPPLcOWNO5sXSmWFpRWTagwhIzQI0lrBphcuDeJxvpW3S3jACYO3SbiC/ksM+rGICG+OAcbagUeDw==}
     dependencies:
       '@transmute/did-key-ed25519': 0.3.0-unstable.10
       '@transmute/did-key-secp256k1': 0.3.0-unstable.10
@@ -6941,8 +6805,24 @@ packages:
       - web-streams-polyfill
     dev: true
 
-  /@veramo/did-provider-web/5.0.0:
-    resolution: {integrity: sha512-wtJnp7yUJ90RcqqmAphXkSYzitFkfiOph1NrokRUJl2rQZy0qEvdVGp6jr4gCMyzVOR9rMgQT0qgcTEzUMH6fg==}
+  /@veramo/did-provider-pkh/5.1.2:
+    resolution: {integrity: sha512-JzT2eZKZXKo6vqjK31h0A0ye96BJLCXRKzU7L1IBzE1lcoGJRqrjENUuY1HTbdXeOXRFLGEGKW35WPzB1Rxz0A==}
+    dependencies:
+      '@ethersproject/abstract-provider': 5.7.0
+      '@ethersproject/bignumber': 5.7.0
+      '@ethersproject/signing-key': 5.7.0
+      '@ethersproject/transactions': 5.7.0
+      '@veramo/core-types': 5.1.2
+      '@veramo/did-manager': 5.1.2
+      caip: 1.1.0
+      debug: 4.3.4
+      did-resolver: 4.0.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@veramo/did-provider-web/5.1.2:
+    resolution: {integrity: sha512-5ZwgQgIfkQFJy6n4+o7nsPRvbWTP65O4ErxMZIQeGhYVcGr5Q6MJk9g+A4bGy/jdJEKzyzD7e1XWcjxJTPJT2w==}
     dependencies:
       '@veramo/core-types': 5.1.2
       '@veramo/did-manager': 5.1.2
@@ -6951,10 +6831,10 @@ packages:
       - supports-color
     dev: true
 
-  /@veramo/did-resolver/5.0.0:
-    resolution: {integrity: sha512-vsQO7/cAKVAnlPKGAO/YIsqrmV4+V8XQxCcclNwR/oCWtDrV3284V3tSHbj0+6cBsObY2yX1psjESJqTyaHjzg==}
+  /@veramo/did-resolver/5.1.2:
+    resolution: {integrity: sha512-edvF4E6X3XwVUH/eeIsZmYJGfHVL0fFPzdl9lf0jrCiticik76QYiUWLXj67q8E43Lv16mYOIe3S3qQ3/vmsKg==}
     dependencies:
-      '@veramo/core-types': 5.0.0
+      '@veramo/core-types': 5.1.2
       '@veramo/utils': 5.1.2
       cross-fetch: 3.1.5
       debug: 4.3.4
@@ -6979,21 +6859,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /@veramo/key-manager/5.0.0:
-    resolution: {integrity: sha512-gqmSMBSjz+aLJlkiEDKq2fOO97DhN3s5Lg/e5mnGzsEjsFKoifc0TvwjOx+wUF5RwyqBC++l1xlpvPrsr4/9zQ==}
-    dependencies:
-      '@ethersproject/bytes': 5.7.0
-      '@ethersproject/strings': 5.7.0
-      '@ethersproject/transactions': 5.7.0
-      '@stablelib/ed25519': 1.0.3
-      '@veramo/core-types': 5.0.0
-      debug: 4.3.4
-      did-jwt: 6.11.1
-      uint8arrays: 3.1.1
-      uuid: 9.0.0
-    transitivePeerDependencies:
-      - supports-color
 
   /@veramo/key-manager/5.1.2:
     resolution: {integrity: sha512-o7sNQfDjdJO0MkV+wwUL5wQwZXBG6hMXdbaTqwZgdA0btE9267anx9Cy7dpLnfsRWvHM3EsLFTuZdL9mytMIgQ==}
@@ -7034,15 +6899,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@veramo/message-handler/5.0.0:
-    resolution: {integrity: sha512-WdRwkpgSOmHZ2ql7CniTxfBi11iVu/Mxi6QyEj/kWduXzPjJYqipFMPXw4l81tcZog0ZZ8kmJGSI4vXIENigxQ==}
-    dependencies:
-      '@veramo/core-types': 5.1.2
-      debug: 4.3.4
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@veramo/message-handler/5.1.2:
     resolution: {integrity: sha512-fov1wFOe5f4YoNpmjlo8pRyG2GJI0qlSW0Zvo3umhbfMc/yohcx8zAi4ZaR3uqxPGfsdsbCO2zU8+VSfUqcH0Q==}
     dependencies:
@@ -7082,11 +6938,11 @@ packages:
       - supports-color
     dev: true
 
-  /@veramo/selective-disclosure/5.0.0:
-    resolution: {integrity: sha512-LD5uBC5C+FcliHyWLnb3VYd7W2UtZKVd1ohxkjKQSH+1sIXlYxsJ5Xe0QbD7nAmKQYwaUUcw0yRsnlsRzlaRtg==}
+  /@veramo/selective-disclosure/5.1.2:
+    resolution: {integrity: sha512-XD4JvS0PtU6pFLA2ulbSHiT/VtJfkiJEyyDoKGIL6sxMorocfzMI9eg9wRpI8k3SHKiA+VrP5UeNKsNnlodHiQ==}
     dependencies:
       '@veramo/core-types': 5.1.2
-      '@veramo/message-handler': 5.0.0
+      '@veramo/message-handler': 5.1.2
       '@veramo/utils': 5.1.2
       debug: 4.3.4
       did-jwt: 6.11.1
@@ -7096,11 +6952,11 @@ packages:
       - supports-color
     dev: true
 
-  /@veramo/url-handler/5.0.0:
-    resolution: {integrity: sha512-6shcSub7CvbIPL2hDetb8zqeiiMXgpqA1vRwjjC7v6I2HDg6bYsHmUxEXIwk7OU8UODhl3dT72N5DjZ/bqrCpg==}
+  /@veramo/url-handler/5.1.2:
+    resolution: {integrity: sha512-k8Ao++I6uFkdz2xOU5z0Fv6pXnyediyeywhfHprarwaFjpw7Gi00QEnU3+1gciCIxVDXTpc/a2uKJS0FkUIwJw==}
     dependencies:
       '@veramo/core-types': 5.1.2
-      '@veramo/message-handler': 5.0.0
+      '@veramo/message-handler': 5.1.2
       cross-fetch: 3.1.5
       debug: 4.3.4
       url-parse: 1.5.10
@@ -8207,6 +8063,10 @@ packages:
       union-value: 1.0.1
       unset-value: 1.0.0
 
+  /caip/1.1.0:
+    resolution: {integrity: sha512-yOO3Fu4ygyKYAdznuoaqschMKIZzcdgyMpBNtrIfrUhnOeaOWG+dh0c13wcOS6B/46IGGbncoyzJlio79jU7rw==}
+    dev: true
+
   /call-bind/1.0.2:
     resolution: {integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==}
     dependencies:
@@ -8575,6 +8435,11 @@ packages:
       table-layout: 1.0.2
       typical: 5.2.0
     optional: true
+
+  /commander/10.0.0:
+    resolution: {integrity: sha512-zS5PnTI22FIRM6ylNW8G4Ap0IEOyk62fhLSD0+uHRT9McRCLGpkVNvao4bjimpK/GShynyQkFFxHhwMcETmduA==}
+    engines: {node: '>=14'}
+    dev: true
 
   /commander/2.13.0:
     resolution: {integrity: sha512-MVuS359B+YzaWqjCL/c+22gfryv+mCBPHAv3zyVI2GN8EY6IRP8VwtasXn8jyyhvvq84R4ImN1OKRtcbIasjYA==}
@@ -10336,16 +10201,6 @@ packages:
       invariant: 2.2.4
     optional: true
 
-  /expo-random/13.0.0:
-    resolution: {integrity: sha512-aGb0vtUmFFuW0TF1rdOgsz89zEVD/RXUPUnnZy5+i3jJeQ2PerJ4uo72/EuWqHpCBNto8/qT+aCzFinmQDeTAA==}
-    requiresBuild: true
-    peerDependencies:
-      expo: '*'
-    dependencies:
-      base64-js: 1.5.1
-    dev: true
-    optional: true
-
   /expo-random/13.0.0_expo@47.0.13:
     resolution: {integrity: sha512-aGb0vtUmFFuW0TF1rdOgsz89zEVD/RXUPUnnZy5+i3jJeQ2PerJ4uo72/EuWqHpCBNto8/qT+aCzFinmQDeTAA==}
     requiresBuild: true
@@ -12093,26 +11948,6 @@ packages:
       node-fetch: 1.7.3
       whatwg-fetch: 3.6.2
     dev: false
-
-  /isomorphic-webcrypto/2.3.8:
-    resolution: {integrity: sha512-XddQSI0WYlSCjxtm1AI8kWQOulf7hAN3k3DclF1sxDJZqOe0pcsOt675zvWW91cZH9hYs3nlA3Ev8QK5i80SxQ==}
-    dependencies:
-      '@peculiar/webcrypto': 1.4.1
-      asmcrypto.js: 0.22.0
-      b64-lite: 1.4.0
-      b64u-lite: 1.1.0
-      msrcrypto: 1.5.8
-      str2buf: 1.3.0
-      webcrypto-shim: 0.1.7
-    optionalDependencies:
-      '@unimodules/core': 7.1.2
-      '@unimodules/react-native-adapter': 6.3.9
-      expo-random: 13.0.0
-      react-native-securerandom: 0.1.1
-    transitivePeerDependencies:
-      - expo
-      - react-native
-    dev: true
 
   /isomorphic-webcrypto/2.3.8_tb7mk6b5yelqt4zuhthcmjlbfm:
     resolution: {integrity: sha512-XddQSI0WYlSCjxtm1AI8kWQOulf7hAN3k3DclF1sxDJZqOe0pcsOt675zvWW91cZH9hYs3nlA3Ev8QK5i80SxQ==}
@@ -16165,16 +16000,6 @@ packages:
   /react-native-gradle-plugin/0.71.15:
     resolution: {integrity: sha512-7S3pAuPaQJlhax6EZ4JMsDNpj05TfuzX9gPgWLrFfAIWIFLuJ6aDQYAZy2TEI9QJALPoWrj8LWaqP/DGYh14pw==}
 
-  /react-native-securerandom/0.1.1:
-    resolution: {integrity: sha512-CozcCx0lpBLevxiXEb86kwLRalBCHNjiGPlw3P7Fi27U6ZLdfjOCNRHD1LtBKcvPvI3TvkBXB3GOtLvqaYJLGw==}
-    requiresBuild: true
-    peerDependencies:
-      react-native: '*'
-    dependencies:
-      base64-js: 1.5.1
-    dev: true
-    optional: true
-
   /react-native-securerandom/0.1.1_react-native@0.71.3:
     resolution: {integrity: sha512-CozcCx0lpBLevxiXEb86kwLRalBCHNjiGPlw3P7Fi27U6ZLdfjOCNRHD1LtBKcvPvI3TvkBXB3GOtLvqaYJLGw==}
     requiresBuild: true
@@ -19350,26 +19175,6 @@ packages:
       validator: 13.9.0
     optionalDependencies:
       commander: 9.5.0
-
-  github.com/uport-project/EcdsaSecp256k1RecoverySignature2020/ab0db52de6f4e6663ef271a48009ba26e688ef9b:
-    resolution: {tarball: https://codeload.github.com/uport-project/EcdsaSecp256k1RecoverySignature2020/tar.gz/ab0db52de6f4e6663ef271a48009ba26e688ef9b}
-    name: '@veramo-community/lds-ecdsa-secp256k1-recovery2020'
-    version: 0.0.8
-    dependencies:
-      '@bitauth/libauth': 1.19.1
-      '@digitalcredentials/jsonld': 5.2.1
-      '@digitalcredentials/jsonld-signatures': 9.3.1
-      '@ethersproject/transactions': 5.7.0
-      '@trust/keyto': 1.0.1
-      base64url: 3.0.1
-      crypto-ld: 7.0.0
-      json-stringify-deterministic: 1.0.8
-    transitivePeerDependencies:
-      - domexception
-      - expo
-      - react-native
-      - web-streams-polyfill
-    dev: true
 
   github.com/uport-project/EcdsaSecp256k1RecoverySignature2020/ab0db52de6f4e6663ef271a48009ba26e688ef9b_tb7mk6b5yelqt4zuhthcmjlbfm:
     resolution: {tarball: https://codeload.github.com/uport-project/EcdsaSecp256k1RecoverySignature2020/tar.gz/ab0db52de6f4e6663ef271a48009ba26e688ef9b}

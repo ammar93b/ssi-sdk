@@ -11,8 +11,8 @@
     "@ethersproject/random": "^5.6.1",
     "@sphereon/ssi-types": "^0.8.0",
     "@stablelib/ed25519": "^1.0.2",
-    "@veramo/core": "5.0.0",
-    "@veramo/did-manager": "5.0.0",
+    "@veramo/core": "^5.1.2",
+    "@veramo/did-manager": "^5.1.2",
     "base64url": "^3.0.1",
     "debug": "^4.1.1",
     "elliptic": "^6.5.4",
@@ -20,9 +20,9 @@
   },
   "devDependencies": {
     "@or13/did-jwk": "^0.0.4",
-    "@veramo/did-resolver": "5.0.0",
-    "@veramo/key-manager": "5.0.0",
-    "@veramo/kms-local": "5.0.0",
+    "@veramo/did-resolver": "^5.1.2",
+    "@veramo/key-manager": "^5.1.2",
+    "@veramo/kms-local": "^5.1.2",
     "did-resolver": "^4.0.1",
     "jose": "^4.10.3"
   },

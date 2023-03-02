@@ -11,7 +11,7 @@
     "typeorm": "^0.3.11",
     "@scure/base": "^1.1.1",
     "@sphereon/ssi-types": "^0.8.0",
-    "@veramo/core": "5.0.0"
+    "@veramo/core": "^5.1.2"
   },
   "devDependencies": {
     "did-resolver": "^4.0.1"

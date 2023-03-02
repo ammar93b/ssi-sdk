@@ -11,7 +11,7 @@
     "jwt-decode": "^3.1.2"
   },
   "devDependencies": {
-    "@veramo/core": "5.0.0"
+    "@veramo/core": "^5.1.2"
   },
   "files": [
     "dist/**/*",

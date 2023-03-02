@@ -14,7 +14,7 @@
     "build": "tsc --build"
   },
   "dependencies": {
-    "@veramo/core": "5.0.0",
+    "@veramo/core": "^5.1.2",
     "base64url": "^3.0.1",
     "react": "^18.2.0",
     "react-qr-code": "^2.0.11"
@@ -23,7 +23,7 @@
     "@types/jest": "^29.2.4",
     "@types/react": "^18.0.26",
     "@types/uuid": "^8.3.4",
-    "@veramo/cli": "5.0.0",
+    "@veramo/cli": "^5.1.2",
     "react-dom": "^18.2.0",
     "jsdom": "^20.0.3",
     "global-jsdom": "^8.6.0",
