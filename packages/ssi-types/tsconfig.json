@@ -3,5 +3,13 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist"
-  }
+  },
+  "exclude": [
+    "**/__tests__/**/*",
+    "**/dist/**/*"
+  ],
+  "include": [
+    "./**/*.ts",
+//    "./src/plugin.schema.json"
+  ]
 }

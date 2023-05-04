@@ -1,7 +1,7 @@
 import { ContextDoc } from '@veramo/credential-ld'
 
-import { LdContextLoader } from '../ld-context-loader'
-import { LdDefaultContexts } from '../ld-default-contexts'
+import { LdContextLoader } from '../index'
+import { LdDefaultContexts } from '../index'
 
 describe('credential-ld context loader', () => {
   const customContext: Record<string, ContextDoc> = {

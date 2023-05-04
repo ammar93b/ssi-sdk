@@ -14,8 +14,6 @@
     "!**/types/**",
     "!**/dist/**",
     "!**/.yalc/**",
-    "!**/node_modules/**/__tests__/**",
-    "!**/node_modules/**/*.test.ts",
     "!**/node_modules/**",
     "!**/packages/**/index.ts"
   ],
@@ -26,18 +24,17 @@
   ],
   "coverageDirectory": "./coverage",
   "transform": {
-    "\\.jsx?$": "babel-jest",
-    "\\.tsx?$": "ts-jest"
+    "^.+\\.m?tsx?$": ["ts-jest", {
+      "tsconfig": "./packages/tsconfig-base.json"
+    }]
   },
+  "transformIgnorePatterns": [
+    "node_modules/(?!(?:.pnpm/)?(nist-weierstrauss|multiformatsgggggg))"
+  ],
   "testMatch": [
     "**/__tests__/**/*.test.*",
     "!**/.yalc/**"
   ],
-  "globals": {
-    "ts-jest": {
-      "tsconfig": "./packages/tsconfig-base.json"
-    }
-  },
   "testEnvironment": "node",
   "automock": false,
   "verbose": true
